@@ -25,10 +25,12 @@
 \usepackage[bottom]{footmisc}
 
 \title{\textbf{Optimal Road Investments in the CEMAC Region}}
-\author{Sebastian Krantz}
+\author{Sebastian Krantz and Theophile Bougna}
 
 \begin{document}
 \maketitle
+
+% \todo[inline]{Theo: write introduction, Sebastian: write model section. Deadline for submission to World Bank Economic Review: Week of November 17th}
 
 \section{Introduction}
 
@@ -297,7 +299,7 @@ The average gain from upgrading existing links to allows speeds of 90km/h is 0.8
 
 Figure \ref{fig:MA_PUSD} shows these marginal gains across all links. The yellow and orange links indicate potential medium-term profitability. Notably, except for segments near Yaounde, no proposed link is medium-term profitable under the frictions scenario. However, new links to better connect Equatorial Guinea and Bangui are profitable without frictions. \newline
 
-\begin{figure}[h!]  \vspace{-1mm}
+\begin{figure}[h!]  \vspace{-6mm}
 \centering
 \caption{\label{fig:MA_PUSD} Investment Returns in \$/min/\$ from Building/Upgrading Each Link to $\geq$90km/h}
 \vspace{2mm}
@@ -382,7 +384,7 @@ Ostensibly, in all three investment packages, the ratio of the change in MA to t
 
 However, long-run changes in the growth rate may be difficult to sustain. Elasticities also have the major drawback of being scale-independent. In this particular case, the percentage change in MA from the investment is 53\% under frictions versus 43\% in the frictionless case. In contrast, the MA gain is only \$7.93B/min under frictions vs. \$10.9B/min in the frictionless case. \newline 
 
-The main takeaway from this exercise should thus be that only relatively small changes ($\sim$1\%) in the region's macroeconomic growth rate are needed to finance these packages in the medium run (30 years). It appears plausible that the sizeable MA gains could induce such changes, but we know little about economic returns to MA and even less relating it to long-term growth.  
+The main takeaway from this exercise should thus be that only relatively small changes ($\sim$1\%) in the region's macroeconomic growth rate are needed to finance these packages in the medium run (30 years). It appears plausible that the sizeable MA gains could induce such changes, but we know little about economic returns to MA and even less relating it to long-term growth. % \\ \vspace{-5mm}
 
 
 
@@ -392,7 +394,30 @@ The main takeaway from this exercise should thus be that only relatively small c
 
 \section{Optimal Network Investments in General Equilibrium}
 
-The General Equilibrium simulations also closely follow \citet{krantz2024optimal}, utilizing the quantitative framework of \citet{fajgelbaum2020optimal} and some parameters taken from \citet{graff2024spatial}.\footnote{In particular the consumption share in utility ($\alpha = 0.7$), elasticity of substitution between different consumption goods ($\sigma = 3.8$), congestion parameter ($\beta = 1.177$), and returns to infrastructure ($\gamma = 0.946$) in the standard decreasing returns case and $\gamma^* = \beta^2/\gamma = 1.464$ in the increasing returns case.} As in \citet{krantz2024optimal}, I let ports produce the imports. Since the region also has land borders, I apply the same scaling factor to the ports' export volume in 2020 Q1, which is obtained considering imports and ports of the entire continent. This yields that imports through the region's 6 ports are 16.9\% of the region's GDP. The total imports of goods and services in the region from 2019-2023 was 28.2\% of GDP, and the merchandise imports were 19.2\% of GDP, so this assumes that the bulk of merchandise imports came in through the region's 6 international ports.  
+The General Equilibrium simulations also closely follow \citet{krantz2024optimal}, utilizing the quantitative framework of \citet{fajgelbaum2020optimal} and some parameters taken from \citet{graff2024spatial}. 
+
+
+\subsection{Model}
+
+I assume an economy consisting of a set of locations $j \in \mathcal{J}$ connected by a transport network. Preferences of a representative worker in location $j$ are given by a normalized inequality-averse Cobb-Douglas utility function over consumption $c_j$ and housing $h_j$
+\begin{equation}
+u_j(c_j, h_j) = \left[\left(\frac{c_j}{\alpha}\right)^\alpha \left(\frac{h_j}{1-\alpha}\right)^{1-\alpha}\right]^{1-\rho}/(1-\rho),
+\end{equation}
+where $\alpha$ is the share of consumption in utility and $\rho$ controls the level of inequality aversion. Following \citet{graff2024spatial}, housing supply is fixed and proportional to population $h_j = 1-\alpha$. Consumption $c_j$ is a CES aggregate over $N$ goods differentiated by origin with elasticity of substitution $\sigma$
+\begin{equation}
+C_j = \left[\sum_{n=1}^N (C_j^n)^\frac{\sigma-1}{\sigma}\right]^\frac{\sigma}{\sigma-1}.
+\end{equation}
+Each location produces a single differentiated good using labor $L_j^n$ according to a linear technology $Y_j^n = Z_j^nL_j^n$ with productivity $Z_j^n$. Trade is subject to iceberg trade costs $\tau_{jk}^n$ such that traders need to ship $1+\tau_{jk}^n$ units of a good for one unit to arrive. The trade cost depends on the infrastructure level $I_{jk}$ and the flow of goods $Q^n_{jk}$ along link $j\to k$
+\begin{equation} \label{eq:tau}
+\tau_{jk}^n (Q^n_{jk}, I_{jk}) = \delta^\tau_{jk}\frac{(Q^n_{jk})^\beta}{I_{jk}^\gamma},
+\end{equation}
+where $\delta^\tau_{jk}$ is a link-specific constant depending on distance. The parameter $\beta$ captures congestion forces, while $\gamma$ captures returns to infrastructure. In the CEMAC application, $I_{jk}$ is measured in km/h as the average travel speed along link $j\to k$ and can be increased at a cost proportional to the per-km construction or upgrading cost implied by Eq. \ref{eq:COST}. A social planner with budget $B$ chooses infrastructure levels $I_{jk}$, subject to staying above current speeds and the budget constraint, to maximize the population-weighted average of $u_j$, respecting the model's equilibrium conditions. 
+
+\subsection{Calibration}
+
+Following \citet{graff2024spatial}, I set the consumption share in utility $\alpha = 0.7$, elasticity of substitution between different consumption goods $\sigma = 3.8$, congestion parameter $\beta = 1.177$, and returns to infrastructure $\gamma = 0.946$. As in \citet{krantz2024optimal}, I let ports produce the imports. Since the region also has land borders, I apply the same scaling factor to the ports' export volume in 2020 Q1, which is obtained considering imports and ports of the entire continent. This yields that imports through the region's 6 ports are 16.9\% of the region's GDP. The total imports of goods and services in the region from 2019-2023 was 28.2\% of GDP, and the merchandise imports were 19.2\% of GDP, so this assumes that the bulk of merchandise imports came through the region's 6 international ports.  \newline 
+
+To create incentives for trade through the network, I let 16 cities with a population of $>$200,000 or ports with outflows of $>$1M TEU in 2020 Q1 produce their own product. The remaining cities are classified into port (positive outflows), large city with population $>$ 100,000, medium-sized city with population $>$50,000, and town/unpopulated node otherwise. The nodes are parameterized with total productivity ($=$ GDP/population) and population. Port cities have additional international productivity to produce 16.9\% of GDP worth of imports.\footnote{Amounting to $(\text{outflows [TEU] in 2020 Q1}\times 2100)/\text{population}$, where the factor of 2100 is a translation of the factor of 37 from \citet{krantz2024optimal} based on the IWI to the GDP scale.} Edges are parameterized with speed in km/h; infrastructure building cost, iceberg trade cost, and (optionally) border frictions---following \citet{krantz2024optimal} except for Eq. \ref{eq:COST}. Figure \ref{fig:Graph_Calib} shows the classified and parameterized graph. % \newline 
 
 \begin{figure}[H] \vspace{-1mm}
 \centering
@@ -411,8 +436,6 @@ Nodes by Type & Speed + IWI + Outflows & Calibration: Total Productivity \\
 \emph{Notes:} Figure shows network calibrated with speed, city population and productivity and port outflows. The middle panel shows the IWI, which is multiplied by population to distribute 80\% of the region's GDP and thus makes up the bulk of the productivity measure. Total productivity, shown on the RHS and obtained as GDP divided by population, additionally considers crop production (20\% of GDP). It is highest in some small cities, which are agricultural hubs. Port outflows are translated following \citep{krantz2024optimal} into intnl. productivity to produce imports amounting to 16.9\% of GDP. 
 % \vspace{-10cm}
 \end{figure}
-
-To create incentives for trade through the network, I let 16 cities with a population of $>$200,000 or ports with outflows of $>$1M TEU in 2020 Q1 produce their own product. The remaining cities are classified into port (positive outflows), large city with population $>$ 100,000, medium-sized city with population $>$50,000, and town/unpopulated node otherwise. The nodes are parameterized with total productivity ($=$ GDP/population) and population. Port cities have additional international productivity to produce 16.9\% of GDP worth of imports.\footnote{Amounting to $(\text{outflows [TEU] in 2020 Q1}\times 2100)/\text{population}$, where the factor of 2100 is a translation of the factor of 37 from \citet{krantz2024optimal} based on the IWI to the GDP scale.} Edges are parameterized with speed in km/h; infrastructure building cost, iceberg trade cost, and (optionally) border frictions, exactly following \citet{krantz2024optimal} except for Eq. \ref{eq:COST}. Figure \ref{fig:Graph_Calib} shows the classified and parameterized graph. \newline 
 
 
 I set the elasticity of substitution equal to $\sigma = 3.8$ following \citet{bajzik2020estimating} and \citet{armington1969theory} because this setting resembles products differentiated by origin traded in an international context. I simulate cases with ($\rho = 2$) or without ($\rho = 0$) inequality aversion and border frictions, as well as with or without new links, for planning budgets of 1, 2, and 4 billion USD'15, which is about 1.19, 2.38, and 4.76 billion in current USD, respectively. I also consider the case of increasing returns to infrastructure ($\gamma^* > \beta$, default is $\gamma < \beta$) with $\gamma^* = \beta^2/\gamma$, i.e., inverting the ratio of $\beta$ (congestion) and $\gamma$ (returns to infrastructure) parameters keeping $\beta$ fixed as in \citet{fajgelbaum2020optimal}. The Appendix also reports results for a 5 billion budget. As mentioned, upgrading all links to $\geq$90km/h would cost 19 billion USD'15, and constructing all proposed links would cost 8 billion USD'15. I start with scenarios where planners can only upgrade existing links. 
@@ -436,7 +459,9 @@ When planners also have the ability to build new roads alongside upgrading exist
 
 The bottom panel of Figure \ref{fig:GE_BUGNOfr} shows allocations of the increasing returns planner ($\gamma > \beta$: congestion forces are weak), yielding reversed relative allocations between building and upgrading road: IRS planners at all budgets spend more than 95\% on upgrading. The only links that are built are the ferry connection between Libreville and Port-Gentil, which is turned into a road, and, under the \$4B budget, a new road between Libreville (Kougouleu) and Bata in Equatorial Guinea. \newline
 
-Border frictions, shown in the bottom panel of Figure \ref{fig:GE_BUGFR}, again reduce investment in certain border-crossing links in favour of others and domestic links. The most notable change is under the IRS \$4B planner, which does not build the expensive border-crossing new road from Libreville (Kougouleu) to Bata under frictions but instead strengthens other parts of the network. 
+Border frictions, shown in the bottom panel of Figure \ref{fig:GE_BUGFR}, again reduce investment in certain border-crossing links in favour of others and domestic links. The most notable change is under the IRS \$4B planner, which does not build the expensive border-crossing new road from Libreville (Kougouleu) to Bata under frictions but instead strengthens other parts of the network. \newline
+
+Frictions also reduce the welfare gains attainable from investing the same amount by up to 8.6\% in the \$4B IRS case. Appendix Figure \ref{fig:GE_UG_5b} shows the 5B planner's allocation, which is very similar except that this planner builds the Libreville (Kougouleu) $\to$ Bata link, even under frictions.
 
 
 \begin{figure}[H] \vspace{-5mm}
@@ -602,7 +627,7 @@ New: 86km $|$ UG: 1440km & New: 102km $|$ UG: 3001km & New: 285km $|$ UG: 6308km
  \hphantom{a}
  \vspace{-8mm}
 
-Frictions also reduce the welfare gains attainable from investing the same amount by up to 8.6\% in the \$4B IRS case. Appendix Figure \ref{fig:GE_UG_5b} shows the 5B planner's allocation, which is very similar except that this planner builds the Libreville (Kougouleu) $\to$ Bata link, even under frictions.
+
 
 \section{Evaluating Regional Road Projects}
 
@@ -633,7 +658,7 @@ No Frictions & 2019 Doing Business Frictions & MA Ratio (Frictions/Frictionless)
 %\end{tabular}
 \raggedright
 \scriptsize 
-\emph{Notes:} Figure shows total travel-time-denominated MA gains measured (summed) across all trips from upgrading a link to allow travel speeds of $\geq$90km/h for investment projects in the region. The bottom panel shows marginal returns in \$/min/\$ (dollar per minute (MA) per dollar invested; dollars are in constant 2015 terms).  \vspace{-5mm}
+\emph{Notes:} Figure shows total travel-time-denominated MA gains measured (summed) across all trips from upgrading a link to allow travel speeds of $\geq$90km/h for investment projects in the region. The bottom panel shows marginal returns in \$/min/\$ (dollar per minute (MA) per dollar invested; dollars are in constant 2015 terms).  % \vspace{-5mm}
 \end{figure}
 
 %\begin{figure}[H]  \vspace{-1mm}
