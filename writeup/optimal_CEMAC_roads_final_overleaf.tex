@@ -15,7 +15,7 @@
 \usepackage{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \usepackage{apacite} % APA style citations
-\AtBeginDocument{\urlstyle{APACsame}}  % Links in APA citytions same formatting
+\AtBeginDocument{\urlstyle{APACsame}}  % Links in APA citations same formatting
 \usepackage{tabulary}
 \usepackage{natbib} % natbib citations: \citep{} and \citet{} for in-text
 \usepackage{booktabs}
@@ -44,17 +44,17 @@ This paper applies a quantitative spatial framework to identify and characterize
 \newpage
 \section{Introduction}
 
-The Economic and Monetary Community of Central Africa (CEMAC) comprises six member states—Cameroon, Central African Republic, Chad, Republic of Congo, Equatorial Guinea, and Gabon—representing a region with significant economic potential but persistent challenges in achieving regional integration, economic diversification, and sustainable development. Transport infrastructure, particularly the road network, has emerged as a critical bottleneck impeding. Despite substantial investments over recent decades, the region’s road network remains fragmented, border frictions are high, and market access for both people and goods is uneven—especially for landlocked and rural areas \citep{LPI2023,WorldBank2025_CEMAC_InfrastructureSAP}. These constraints have been highlighted in recent strategic assessments, notably the World Bank's CEMAC Regional Infrastructure Sector Assessment (InfraSAP), which underscores the need for evidence-based, regionally coordinated investment strategies to unlock the region’s economic potential. \newline 
+The Economic and Monetary Community of Central Africa (CEMAC) comprises six member states—Cameroon, Central African Republic, Chad, Republic of Congo, Equatorial Guinea, and Gabon—representing a region with significant economic potential but persistent challenges in achieving regional integration, economic diversification, and sustainable development. Transport infrastructure, particularly the road network, has emerged as a critical bottleneck impeding regional growth. Despite substantial investments over recent decades, the region’s road network remains fragmented, border frictions are high, and market access for both people and goods is uneven—especially for landlocked and rural areas \citep{LPI2023,WorldBank2025_CEMAC_InfrastructureSAP}. These constraints have been highlighted in recent strategic assessments, notably the World Bank's CEMAC Regional Infrastructure Sector Assessment (InfraSAP), which underscores the need for evidence-based, regionally coordinated investment strategies to unlock the region’s economic potential. \newline 
 
 The importance of transport infrastructure in fostering economic growth and regional integration is well established in the literature. %Early theoretical work by \citet{armington1969theory} and 
-Empirical studies such as \citet{donaldson2016railroads} demonstrate the transformative effects of improved market access on land values, trade, and economic activity. \citet{collier2016cost} anaylze the costs and challenges associated with road infrastructure in low- and middle-income countries, emphasizing the need for context-specific investment strategies. \citet{fajgelbaum2020optimal} introduce spatial equilibrium models that allow for the optimal allocation of transport investments, accounting for congestion, returns to infrastructure, and welfare maximization.
+Empirical studies such as \citet{donaldson2016railroads} demonstrate the transformative effects of improved market access on land values, trade, and economic activity. \citet{collier2016cost} analyze the costs and challenges associated with road infrastructure in low- and middle-income countries, emphasizing the need for context-specific investment strategies. \citet{fajgelbaum2020optimal} introduce spatial equilibrium models that allow for the optimal allocation of transport investments, accounting for congestion, returns to infrastructure, and welfare maximization.
 Recent advances in data availability and modeling techniques have enabled more granular analysis of transport networks. \citet{graff2024spatial} and \citet{krantz2024optimal} leverage high-resolution spatial data, network representations, and general equilibrium analysis to identify investment priorities and quantify welfare gains across Africa. These studies highlight the role of network efficiency, border frictions, and path dependence in shaping economic outcomes. However, much of the existing literature has focused on national or continental scales, with limited attention to the unique institutional, geographic, and economic context of Central Africa. The region’s complex political economy, diverse topography, and history of conflict present additional challenges for infrastructure planning and implementation \citep{raleigh2023political,AfDB2022_AfricanEconomicOutlook}. \newline 
 
 Within CEMAC, border frictions remain a major impediment to regional integration. The World Bank’s Logistics Performance Index \citep{LPI2023} and Doing Business surveys \citep{fontagne2023trade} consistently rank Central African countries among the lowest globally in terms of trade facilitation and border efficiency. Thick borders, inefficient customs procedures, and lack of harmonization in transport regulations contribute to high transaction costs and delays, undermining the competitiveness of regional corridors. The InfraSAP and related policy studies \citep{WorldBank2025_CEMAC_InfrastructureSAP, AfricanUnion2021_AfricanIntegrationReport} emphasize the need for targeted reforms, such as the implementation of one-stop border posts, digitalization of trade documentation, and harmonization of customs procedures. \newline 
 
 In addition to border issues, the allocation of road investments has often been driven by political considerations rather than rigorous economic analysis. As a result, resources are frequently spread thinly across low-impact projects, while high-impact corridors—connecting major urban centers, ports, and productive agricultural zones—remain underdeveloped \citep{collier2016cost, krantz2024optimal}. The literature advocates for the use of quantitative frameworks to guide investment decisions, incorporating market access, welfare gains, and cost-benefit analysis \citep{donaldson2016railroads, fajgelbaum2020optimal, krantz2024optimal, herrera2024shrinking, donaldson2025transport, FajgelbaumGaubert2025Optimal, allen2025evaluating}. Furthermore, the integration of logistics platforms, port efficiency, and multimodal connectivity (including rail and waterways) is increasingly recognized as essential for maximizing the returns on road investments \citep{WorldBank2025_ContainerPortindex, AfDB2022_AfricanPortsconnectivity}. \newline 
 
-Social, environmental, and safety considerations are also gaining prominence in infrastructure planning. The \citet{AfDB2022_AfricanEconomicOutlook} and recent World Bank report \citet{WorldBank2020_StrengtheningResilience} highlights the importance of mainstreaming road safety audits, climate resilience measures, and social inclusion strategies into transport investments. Targeted interventions to improve access to rural productive centers and urban mobility can strengthen food systems, livelihoods, and private sector development, contributing to more inclusive and sustainable growth. \newline 
+Social, environmental, and safety considerations are also gaining prominence in infrastructure planning. The \citet{AfDB2022_AfricanEconomicOutlook} and the recent World Bank report \citet{WorldBank2020_StrengtheningResilience} highlight the importance of mainstreaming road safety audits, climate resilience measures, and social inclusion strategies into transport investments. Targeted interventions to improve access to rural productive centers and urban mobility can strengthen food systems, livelihoods, and private sector development, contributing to more inclusive and sustainable growth. \newline 
 
 This paper contributes to the literature by characterizing optimal road investments in the CEMAC region through a rigorous quantitative framework that integrates updated data on population, wealth, agricultural production, conflict incidence, and border frictions. Building on the methodology of \citet{krantz2024optimal} and the priorities identified in the InfraSAP, we construct a detailed graph representation of the regional road network, evaluate both existing and planned projects—including the Point-Noire–Brazzaville–Bangui–Ndjamena corridor (CD13)—and apply partial and general equilibrium analysis to assess CEMAC market access and welfare-maximizing investments under varying budget and policy scenarios.\newline 
 
@@ -91,14 +91,14 @@ Finally, following \citet{krantz2024optimal}, we apply a network finding algorit
 \emph{Notes:} Figure shows road network graph against a plain (LHS) and topographic (RHS) background map. The network is obtained from 1431 fastest car routes between 54 cities/agglomerations. Each route is assigned a 'Gravity' estimate amounting to the population (in thousands) of start and end city divided by the road distance in meters. The 'Sum of Gravity' is the sum across all routes using this segment in the network. It is a measure of expected traffic volume. The green lines indicate high-yield network extensions yielding $\geq$50\% reductions in road distance between adjacent nodes. % \\ \vspace{-5mm}
 \end{figure}
 
-Figure \ref{fig:ROADS} shows the resulting graph, with proposed links in green, against a plain and topographic background map. Existing links are coloured by their "gravity", which is a measure of the expected traffic volume obtained by multiplying the origin and destination city population (in thousands) of each route and dividing by the road distance in meters. This measure is then summed across all routes using a particular link. Ostensibly, the highest expected traffic volume is in the Douala-Yaounde region. It is noteworthy that some of the fastest car routes from western Cameroon up to N'Djamena in Chad traverse eastern Nigeria. The coastal cities of Libreville and Port-Gentil are connected by ferry. This link is treated as a potential new link in GE simulations.  \newline 
+Figure \ref{fig:ROADS} shows the resulting graph, with proposed links in green, against a plain and topographic background map. Existing links are coloured by their "gravity", which is a measure of the expected traffic volume obtained by multiplying the origin and destination city population (in thousands) of each route and dividing by the road distance in meters. This measure is then summed across all routes using a particular link. As expected, traffic volume is highest in the Douala-Yaounde region. It is noteworthy that some of the fastest car routes from western Cameroon up to N'Djamena in Chad traverse eastern Nigeria. The coastal cities of Libreville and Port-Gentil are connected by ferry. This link is treated as a potential new link in GE simulations.  \newline 
 
 
 To parameterize the graph, we add the populations of smaller agglomerations within 30km of these nodes to the node population count, excluding Nigerian agglomerations. CEMAC planners should not maximize welfare or market access in Nigeria. This yields 119 nodes with positive populations, of which 54 are the large cities routed from/to. According to the Africapolis 2025 projection, these nodes account for 80\% of the urban population of CEMAC.  \newline %, but only for 45\% of the total population in 2023 according to the World Development Indicators database. Since large cities generally exhibit higher productivities than small cities and rural populations, and, in the absence of a convincing way to measure productivity,\footnote{\citet{krantz2024optimal} in the appendix shows that nightlights per capita is not a convincing productivity measure. \vspace{-3mm}} we make the assumption that they also account for 80\% of the regions GDP. Readers who find this estimate high should note that road projects take 3-5 years to complete, the region's real GDP grew by 2.2\% annually over the last 10 years, and the urban population share, currently at 50\%, is increasing by 0.5 percentage points per year (own calculations using Africa Monitor data \citep{krantz2023africamonitor}). Thus, fixing the GDP of these nodes at 80\% of the region's 2023 GDP (in constant 2015 USD) is moderate for 2028-30.   \newline 
 
   To better distribute GDP across these nodes, we employ the high-resolution remotely sensed International Wealth Index (IWI) by \citet{lee2022high}.\footnote{\citet{krantz2024optimal} in the appendix shows that nightlights per capita is not a convincing productivity measure.} The index estimates asset-based household wealth on a scale from 0 to 100 based on a fixed set of household items recorded in DHS surveys. \citet{lee2022high} combine daylight satellite imagery and OpenStreetMap data in an iterative ML framework to predict the IWI from DHS surveys conducted in 25 Sub-Saharan African (SSA) countries since 2017 and obtain a cross-country $R^2$ of 91.7\%. Their predictions cover all populated areas at an effective resolution of 1.6km. \newline 
   
-Additionally, we consider the total crop production of the region's 11 most important crops accounting for 80\% of total crop production from the SPAM dataset \citep{SPAM} ($\sim$10km spatial resolution). These crops and their share of total CEMAC crop production are CASS (19.8\%), PLNT (13\%), OILP (6.7\%), SUGC (6.7\%), MAIZ (6.6\%), ORTS (5.5\%), SORG (5.4\%), VEGE (4.5\%), YAMS (4.4\%), GROU (3.8\%), and BANA (3.5\%). Figure \ref{fig:IWISPAM} visualizes both measures. 
+Additionally, we consider the total crop production of the region's 11 most important crops accounting for 80\% of total crop production from the SPAM dataset \citep{SPAM} ($\sim$10km spatial resolution). These crops and their share of total CEMAC crop production are Cassava (19.8\%), Plantain (13\%), Oil Palm (6.7\%), Sugarcane (6.7\%), Maize (6.6\%), Other Roots (5.5\%), Sorghum (5.4\%), Other Vegetables (4.5\%), Yams (4.4\%), Groundnut (3.8\%), and Banana (3.5\%). Figure \ref{fig:IWISPAM} visualizes both measures. 
 
 \begin{figure}[H] \vspace{-4mm}
 \centering
@@ -186,7 +186,7 @@ Unweighted NRE Gain (\%) & Gravity Weighted NRE Gain (\%) \\ % Improved US-Grade
  % \vspace{-1mm}
 \end{figure}
 
-Similarly, we can consider total market access (MA) implied by the network, where the MA of node $i$ is the sum of the estimated GDPs of all other nodes $j$ divided by their respective road distance along the fastest $i\to j$ route. The total network MA is then the sum of MA across all nodes. The total network MA is 28.3 billion USD'15 per km. Building all proposed links increases MA by 5\%. Using 2019 estimates of cross-border frictions from the final edition of the World Bank Doing Business surveys and translating documentary and border compliance time/cost into road time/distance, respectively, following \citet{krantz2024optimal}, reduces total MA to 19.6 billion USD'15 per km or 31\% smaller. The MA gain from all proposed links reduces to 3\%. Figure \ref{fig:MA_DA_TAN} shows the total MA gains from building each link with and without frictions and their ratio. Ostensibly, frictions reduce the value of new border-crossing links. The marginal gains from all links are lower under frictions as long as the route is fixed and transiting is less costly. %\citet{krantz2024optimal} discusses other cases where traders can adjust their multi-country routes to minimize border costs, which I refrain from here as the CEMAC region is small. 
+Similarly, we can consider total market access (MA) implied by the network, where the MA of node $i$ is the sum of the estimated GDPs of all other nodes $j$ divided by their respective road distance along the fastest $i\to j$ route. The total network MA is then the sum of MA across all nodes. The total network MA is 28.3 billion USD'15 per km. Building all proposed links increases MA by 5\%. Using 2019 estimates of cross-border frictions from the final edition of the World Bank Doing Business surveys and translating documentary and border compliance time/cost into road time/distance, respectively, following \citet{krantz2024optimal}, reduces total MA to 19.6 billion USD'15 per km or 31\% smaller. The MA gain from all proposed links reduces to 3\%. Figure \ref{fig:MA_DA_TAN} shows the total MA gains from building each link with and without frictions and their ratio. Clearly, frictions reduce the value of new border-crossing links. The marginal gains from all links are lower under frictions as long as the route is fixed and transiting is less costly. %\citet{krantz2024optimal} discusses other cases where traders can adjust their multi-country routes to minimize border costs, which I refrain from here as the CEMAC region is small. 
 Following \citet{krantz2024optimal}, we assume a 48h transit cost (24h per border) for transiting through 3rd countries. %, the focus should not be on the impact of border frictions except to make it clear that they should be removed as much as possible. 
 
 
@@ -247,7 +247,7 @@ No Frictions & 2019 Doing Business Frictions & Ratio (Frictions/Frictionless) \\
  % \vspace{-2mm}
 \end{figure}
 
-Ostensibly, upgrading links in the populated areas of Cameroon, the by far largest economy among the 6, yields the greatest MA returns, especially under border frictions. Without frictions, better connecting the economic center of Cameroon up north and east also yields high MA gains.  
+Evidently, upgrading links in the populated areas of Cameroon, by far the largest economy among the six, yields the greatest MA returns, especially under border frictions. Without frictions, better connecting the economic center of Cameroon up north and east also yields high MA gains.  
 
 \subsection{Border Post Optimization}
 
@@ -284,7 +284,7 @@ In line with \citet{collier2016cost}'s treatment of continuous variables, we tak
 \begin{equation} \label{eq:COST}
 \ln\left(\frac{\text{cost}}{km}\right) = \ln(X) -0.11 (\text{dist} > 50km) + 0.12 \ln(\text{rugg}) + 0.085 \ln\left(\frac{\text{pop}}{km^2}\right)+ 0.1 \ln(\Omega_j),
 \end{equation}
-where $X$ = 120,000 for new roads, $X$ = 101,600 for upgrades, $X$ = 64,600 for mixed works, and $X$ = 28.400 for resurfacing as in \citet{krantz2024optimal}. The first part is taken from Eq. (21) of \citet{fajgelbaum2020optimal}, the population coefficient follows \citet{collier2016cost} and \citet{krantz2024optimal}. The 120,000 USD/km constant makes the mean cost/km across all existing African links (excluding $\ln(\Omega_j)$) approximately equal to \$611K/km. The other thresholds adjust for different kinds of upgrading costs following \citet{krantz2024optimal}: (1) roads with speeds $<$60km/h require an upgrade at average cost of \$513K /km; (2) roads with speeds 60-79km/h require mixed works at average cost of \$326K/km; (3) roads with speeds 80-90km/h require resurfacing at \$143K/km on average. 
+where $X$ = 120,000 for new roads, $X$ = 101,600 for upgrades, $X$ = 64,600 for mixed works, and $X$ = 28,400 for resurfacing as in \citet{krantz2024optimal}. The first part is taken from Eq. (21) of \citet{fajgelbaum2020optimal}, the population coefficient follows \citet{collier2016cost} and \citet{krantz2024optimal}. The 120,000 USD/km constant makes the mean cost/km across all existing African links (excluding $\ln(\Omega_j)$) approximately equal to \$611K/km. The other thresholds adjust for different kinds of upgrading costs following \citet{krantz2024optimal}: (1) roads with speeds $<$60km/h require an upgrade at average cost of \$513K /km; (2) roads with speeds 60-79km/h require mixed works at average cost of \$326K/km; (3) roads with speeds 80-90km/h require resurfacing at \$143K/km on average. 
 
 \begin{figure}[H] \vspace{-1mm}
 \centering
@@ -303,7 +303,7 @@ where $X$ = 120,000 for new roads, $X$ = 101,600 for upgrades, $X$ = 64,600 for 
 % \vspace{-2mm}
 \end{figure}
 
-Figure \ref{fig:RUGG_POP} shows on the LHS ruggedness from \citet{nunn2012ruggedness} and WorldPop 2020 population density; both are estimated within a 3km two-sided buffer around existing and new links. Ostensibly, the area around Bamenda in Cameroon and further north along the Cameroon-Nigeria border is very rugged. This area is also conflict prone $-$ Appendix Figure \ref{fig:ACLED} shows ACLED conflict event data \citep{raleigh2023political} and the RHS of Figure \ref{fig:RUGG_POP} aggregates it around each link following Eq. \ref{eq:conf}. %\citet{collier2016cost}'s road cost prediction model also includes a conflict variable suggesting that costs rise by 20\% during times of violence, but this is not considered in Eq. \ref{eq:COST}. 
+Figure \ref{fig:RUGG_POP} shows on the LHS ruggedness from \citet{nunn2012ruggedness} and WorldPop 2020 population density; both are estimated within a 3km two-sided buffer around existing and new links. Notably, the area around Bamenda in Cameroon and further north along the Cameroon-Nigeria border is very rugged. This area is also conflict prone $-$ Appendix Figure \ref{fig:ACLED} shows ACLED conflict event data \citep{raleigh2023political} and the RHS of Figure \ref{fig:RUGG_POP} aggregates it around each link following Eq. \ref{eq:conf}. %\citet{collier2016cost}'s road cost prediction model also includes a conflict variable suggesting that costs rise by 20\% during times of violence, but this is not considered in Eq. \ref{eq:COST}. 
 Areas around major cities, especially Douala and Yaounde, are highly populated. \newline
 
 Figure \ref{fig:CTW} shows the different types of work and their estimated costs. Total network cost is 27.6 billion USD'15, and all proposed links cost 8 billion USD'15. Total upgrading cost is 19 billion USD'15, of which 0.25 billion is resurfacing, 5.2 billion mixed works, and 13.6 billion upgrades. 
@@ -324,9 +324,9 @@ Figure \ref{fig:CTW} shows the different types of work and their estimated costs
 \emph{Notes:} Figure shows the type of work and cost depending on link speed: links $<$60km/h need upgrading, between 60 and 80km/h need mixed works, and links 80-90km/h need resurfacing. Links above 90km/h do not need additional work. 
 \end{figure}
 
-Following \citet{krantz2024optimal}, we compute link-level cost-benefit ratios as the gain in MA divided by the cost, yielding estimates denominated in \$/min/\$ or 'dollar per minute per dollar invested.' The economic value of such a metric depends on how increases in MA translate into increases in economic activity. \citet{krantz2024optimal} estimates a long-run elasticity of GDP to MA in Africa of around 0.33, suggesting that in Africa MA translates into GDP at a rate of 3:1. This finding is consinstent with \citet{donaldson2016railroads}'s estimates of a 0.5 elasticity of changes in US land values between 1870 and 1890 to a railroad-induced increases in MA. However, readers should note, particularly in comparison with \citet{krantz2024optimal}, that the focus on the CEMAC region alone yields smaller estimates of MA gains from road projects because locations outside of CEMAC which could benefit from them, including traders transiting through CEMAC, are not considered. \newline 
+Following \citet{krantz2024optimal}, we compute link-level cost-benefit ratios as the gain in MA divided by the cost, yielding estimates denominated in \$/min/\$ or 'dollar per minute per dollar invested.' The economic value of such a metric depends on how increases in MA translate into increases in economic activity. \citet{krantz2024optimal} estimates a long-run elasticity of GDP to MA in Africa of around 0.33, suggesting that in Africa MA translates into GDP at a rate of 3:1. This finding is consistent with \citet{donaldson2016railroads}'s estimates of a 0.5 elasticity of changes in US land values between 1870 and 1890 to a railroad-induced increases in MA. However, readers should note, particularly in comparison with \citet{krantz2024optimal}, that the focus on the CEMAC region alone yields smaller estimates of MA gains from road projects because locations outside of CEMAC which could benefit from them, including traders transiting through CEMAC, are not considered. \newline 
 
-The average gain from upgrading existing links to allows speeds of 90km/h is 0.85\$/min/\$. This drops to 0.47\$/min/\$ under border frictions. In either case, \citet{krantz2024optimal} and \citet{donaldson2016railroads}'s finding would imply that economic gains are at max half of that; thus, upgrading all links is not sensible. Only 17.5\% of links have gains above 2\$/min/\$ without frictions, indicating medium-term profitability. With frictions, only 7.6\% have gains above 2\$/min/\$. \newline 
+The average gain from upgrading existing links to allow speeds of 90km/h is 0.85\$/min/\$. This drops to 0.47\$/min/\$ under border frictions. In either case, \citet{krantz2024optimal} and \citet{donaldson2016railroads}'s finding would imply that economic gains are at max half of that; thus, upgrading all links is not sensible. Only 17.5\% of links have gains above 2\$/min/\$ without frictions, indicating medium-term profitability. With frictions, only 7.6\% have gains above 2\$/min/\$. \newline 
 
 Figure \ref{fig:MA_PUSD} shows these marginal gains across all links. The yellow and orange links indicate potential medium-term profitability. Notably, except for segments near Yaounde, no proposed link is medium-term profitable under the frictions scenario. However, new links to better connect Equatorial Guinea and Bangui are profitable without frictions. \newline
 
@@ -411,7 +411,7 @@ All Links $>\$1$/min/\$ (NFNN) & \$4B & $44-47$ & 0.87\% $\to$ 3.530 & 1.91\% $\
 \end{tabular}
 \end{table} 
 
-Ostensibly, in all three investment packages, the ratio of the change in MA to the break-even change in the macroeconomic growth rate is greater than 40, suggesting that these packages should all be macroeconomically feasible in the medium run under mild assumptions about the economic returns to increased market access. For example, the package with all links $>0.5$\$/min/\$ returns with and without frictions costs \$4.3B USD'15 and yields a 43-54\% MA gain. Under the 3.5\% baseline growth scenario, the investment would need to raise the macroeconomic growth rate by around 1\% to 3.533\% for the investment to break even after 30 years. This implies \%$\Delta$MA$\to$\%$\Delta$\%$\Delta$GDP of 40:1, which is much smaller than the 3:1, estimated by \citet{krantz2024optimal} and the 2:1 of \citet{donaldson2016railroads} with regard to US land value changes from railroad-induced increases in MA. \newline 
+Across all three investment packages, the ratio of the change in MA to the break-even change in the macroeconomic growth rate is greater than 40, suggesting that these packages should all be macroeconomically feasible in the medium run under mild assumptions about the economic returns to increased market access. For example, the package with all links $>0.5$\$/min/\$ returns with and without frictions costs \$4.3B USD'15 and yields a 43-54\% MA gain. Under the 3.5\% baseline growth scenario, the investment would need to raise the macroeconomic growth rate by around 1\% to 3.533\% for the investment to break even after 30 years. This implies \%$\Delta$MA$\to$\%$\Delta$\%$\Delta$GDP of 40:1, which is much smaller than the 3:1, estimated by \citet{krantz2024optimal} and the 2:1 of \citet{donaldson2016railroads} with regard to US land value changes from railroad-induced increases in MA. \newline 
 
 However, long-run changes in the growth rate may be difficult to sustain. Elasticities also have the major drawback of being scale-independent. In this particular case, the percentage change in MA from the investment is 53\% under frictions versus 43\% in the frictionless case. In contrast, the MA gain is only \$7.93B/min under frictions vs. \$10.9B/min in the frictionless case. \newline 
 
@@ -520,7 +520,7 @@ Upgraded: 1501km & Upgraded: 3057km & Upgraded: 6738km \\
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_1b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_2b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} &
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_4b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"}   \\
-\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$)} \\ [0.5em]
+\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$)} \\ [0.5em]
 \$1B USD'15 $|$ WG: 1.2\% & \$2B USD'15 $|$ WG: 1.8\% & \$4B USD'15 $|$ WG: 2.6\%  \\
 Upgraded: 1506km & Upgraded: 3088km & Upgraded: 6682km \\ 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_1b_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} & 
@@ -558,7 +558,7 @@ New: 1612km $|$ UG: 119km & New: 2954km $|$ UG: 419km & New: 4775km $|$ UG: 1829
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_1b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_2b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} &
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_4b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"}  \\
-\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$)} \\ [0.5em]
+\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$)} \\ [0.5em]
 \$1B USD'15 $|$ WG: 1.3\% & \$2B USD'15 $|$ WG: 2\% & \$4B USD'15 $|$ WG: 3.1\%  \\
 New: 86km $|$ UG: 1440km & New: 102km $|$ UG: 3001km & New: 285km $|$ UG: 6308km \\ 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_1b_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} & 
@@ -584,7 +584,7 @@ New: 86km $|$ UG: 1440km & New: 102km $|$ UG: 3001km & New: 285km $|$ UG: 6308km
  % \hphantom{a}
  % \vspace{-8mm}
 
-\noindent gains at 23.4\%, indicating that the projects jointly manage to divert more traffic along more optimal routes. Under frictions, the MA gain is 26.7\% (1.17\$/min/\$), and the sum of individual MA gains amounts to 23.2\%. Ostensibly, these planned projects include both high and low-yield links and are mainly aimed at connecting the major cities of Douala, Bangui, Brazzaville, and N'Djamena. 
+\noindent gains at 23.4\%, indicating that the projects jointly manage to divert more traffic along more optimal routes. Under frictions, the MA gain is 26.7\% (1.17\$/min/\$), and the sum of individual MA gains amounts to 23.2\%. Evidently, these planned projects include both high- and low-yield links, primarily aimed at connecting the major cities of Douala, Bangui, Brazzaville, and N'Djamena. 
 
 
 
@@ -646,7 +646,7 @@ Upgraded: 5295km$|$ WG: 0.9\% & Upgraded: 5216km $|$ WG: 0.8\% & N: 4453km, UG: 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_3200m_fixed_cgc_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_3200m_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} &
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_3400m_fixed_cgc_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} \\
-\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$)} \\ [0.5em]
+\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$)} \\ [0.5em]
 Upgraded: 5211km $|$ WG: 2.3\% & Upgraded: 5218km $|$ WG: 2.3\% & N: 273km, UG: 5233km $|$ WG: 2.9\% \\ 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_3200m_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_3200m_fixed_cgc_irs_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} &
@@ -732,7 +732,7 @@ The successful implementation of these recommendations requires coordinated acti
 
 \begin{figure}[H] \vspace{-1mm}
 \centering
-\caption{\label{fig:ACLED} ACLED Armed Conflict Events 2018-2014} 
+\caption{\label{fig:ACLED} ACLED Armed Conflict Events 2018-2024}
 \vspace{2mm}
 \includegraphics[width=0.9\textwidth]{"figures/ACLED_CEMAC_FATALITIES.pdf"} \\
 % \raggedright
@@ -758,7 +758,7 @@ Upgraded: 1516km [+14km (1\%)] & Upgraded: 3084km [+26km (0.9\%)] & Upgraded: 68
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_1b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_2b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"} &
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_4b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"}  \\
-\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$)} \\ [0.5em]
+\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$)} \\ [0.5em]
 \$1B USD'15 $|$ \%$\Delta$WG: -1\% & \$2B USD'15 $|$ \%$\Delta$WG: 0.2\%  & \$4B USD'15 $|$ \%$\Delta$WG: 1.7\% \\
 Upgraded: 1514km [+9km (0.6\%)] & Upgraded: 3109km [+21km (0.7\%)] & Upgraded: 6781km [+98km (1.5\%)] \\ 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_1b_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"} & 
@@ -799,7 +799,7 @@ Upgraded: 1514km [+9km (0.6\%)] & Upgraded: 3109km [+21km (0.7\%)] & Upgraded: 6
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_1b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_2b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"} &
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_4b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"}  \\
-\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$)} \\ [0.5em]
+\multicolumn{3}{c}{\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$)} \\ [0.5em]
 \$1B USD'15 $|$ \%$\Delta$WG: -1.2\% & \$2B USD'15 $|$ \%$\Delta$WG: -0.1\%  & \$4B USD'15 $|$ \%$\Delta$WG: -8.6\% \\
 {\footnotesize $\Delta$N: -0.2km (0.2\%) $|$ $\Delta$UG: 9km (0.6\%) } & {\footnotesize $\Delta$N: 0.2km (0.2\%) $|$ $\Delta$UG: 19km (0.6\%)} & {\footnotesize $\Delta$N: -162km (57\%) $|$ $\Delta$UG: 350km (5.6\%)}  \\  
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_1b_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_Ijk_bc_perc_ug_diff.pdf"} & 
@@ -831,7 +831,7 @@ Upgraded: 1514km [+9km (0.6\%)] & Upgraded: 3109km [+21km (0.7\%)] & Upgraded: 6
 \vspace{2mm}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{@{}c@{}c@{}c@{}} 
-\textbf{Standard Planner} & \textbf{IA Planner} ($\rho = 2$) & \textbf{IRS Planner} ($\gamma^* = \gamma^2/\beta$) \\
+\textbf{Standard Planner} & \textbf{IA Planner} ($\rho = 2$) & \textbf{IRS Planner} ($\gamma^* = \beta^2/\gamma$) \\
 Upgraded: 8869km $|$ WG: 1.1\% & Upgraded: 8652km $|$ WG: 1.08\% &  Upgraded: 8567km $|$ WG: 3\%  \\
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_5b_fixed_cgc_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_20g_5b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} &
@@ -865,7 +865,7 @@ Upgraded: 8869km $|$ WG: 1.1\% & Upgraded: 8652km $|$ WG: 1.08\% &  Upgraded: 85
 \vspace{2mm}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{@{}c@{}c@{}c@{}} 
-\textbf{Standard Planner} & \textbf{IA Planner} ($\rho = 2$) & \textbf{IRS Planner} ($\gamma^* = \gamma^2/\beta$) \\
+\textbf{Standard Planner} & \textbf{IA Planner} ($\rho = 2$) & \textbf{IRS Planner} ($\gamma^* = \beta^2/\gamma$) \\
 {\small N: 5607km $|$ UG: 2635km $|$ WG: 1.8\%} & {\small N: 5544km $|$ UG: 2655km $|$ WG: 1.8\%} &  {\small N: 319km $|$ UG: 8137km $|$ WG: 3.5\%}  \\
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_5b_fixed_cgc_sigma3.8_rho0_julia_MACR_90kmh_google_perc_ug.pdf"} & 
 \includegraphics[width=0.38\textwidth, trim= {0.9cm 0 0.9cm 0}, clip]{"figures/GE/trans_africa_network_GE_add_20g_5b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_perc_ug.pdf"} &
@@ -900,7 +900,7 @@ Upgraded: 8869km $|$ WG: 1.1\% & Upgraded: 8652km $|$ WG: 1.08\% &  Upgraded: 85
 % \includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_20g_2b_fixed_cgc_sigma3.8_rho0_bc_julia_MACR_90kmh_google_good_flows_4_city.pdf"} \\
 \textbf{Inequality Aversion} ($\rho = 2$) \\
 \includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_20g_2b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_good_flows_4_city.pdf"} \\
-\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$) \\
+\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$) \\
 \includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_20g_2b_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_good_flows_4_city.pdf"} 
 \end{tabular}
 % \raggedright
@@ -916,7 +916,7 @@ Upgraded: 8869km $|$ WG: 1.1\% & Upgraded: 8652km $|$ WG: 1.08\% &  Upgraded: 85
 \includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_add_20g_2b_fixed_cgc_sigma3.8_rho0_julia_MACR_90kmh_google_good_flows_4_city.pdf"} \\
 \textbf{Inequality Aversion} ($\rho = 2$) \\
 \includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_add_20g_2b_fixed_cgc_sigma3.8_rho2_julia_MACR_90kmh_google_good_flows_4_city.pdf"} \\
-\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \gamma^2/\beta$) \\
+\textbf{Increasing Returns to Infrastructure} ($\gamma^* = \beta^2/\gamma$) \\
 \includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_add_20g_2b_fixed_cgc_irs_sigma3.8_rho0_julia_MACR_90kmh_google_good_flows_4_city.pdf"} 
 %1B Standard Planner \\
 %\includegraphics[width=\textwidth]{"figures/GE/trans_africa_network_GE_add_20g_1b_fixed_cgc_sigma3.8_rho0_julia_google_good_flows_4_city.pdf"} \\
